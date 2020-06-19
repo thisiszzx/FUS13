@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스 박스</title>
+  <style>
+    .ediya-menu{
+      list-style: none;
+      padding-left: 0;
+      margin: 0 auto; /* 800짜리 상자가 가운데에 위치 */
+      width: 100%;
+      background-color: #ffff00;
+      display: flex;
+      flex-wrap: wrap; /* 줄바꿈 허용 */
+    }
+    .item{
+      background-color: pink;
+      height: 100px;
+      width: 100%; /* 무조건 일렬로 떨어짐 */
+    }
+    @media screen and (min-width: 600px){ /* 화면이 600px이 되었을 경우 100% -> 50% */
+      .item{                               /* media query 조건이 충족되었을 경우에만 적용 */
+        width: 50%;
+        height: 150px;
+      }
+    }
+    @media screen and (min-width: 1000px){
+      .item{
+        width: 33.333333%;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="ediya-menu">
+    <li class="item">박스1</li>
+    <li class="item">박스2</li>
+    <li class="item">박스3</li>
+    <li class="item">박스4</li>
+    <li class="item">박스5</li>
+    <li class="item">박스6</li>
+  </ul>
+</body>
+</html>
